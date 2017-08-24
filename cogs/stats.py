@@ -140,6 +140,11 @@ class Stats:
             tags = data.get(discrim.id)
             if tags:
                 if clan:
+                    if not tags.get('clan'):
+                        if discrim.id == str(ctx.author.id):
+                    	    return await ctx.send('You don\'t have a clan.')
+                        else:
+                            return await ctx.send('That person does not have a clan!')
                     data = await self.get_clan(tags.get('clan'))
                     embed = parser(data)
                     return await ctx.send(embed=embed)

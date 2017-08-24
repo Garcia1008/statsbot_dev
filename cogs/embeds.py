@@ -12,7 +12,7 @@ random_colors = [0xff6600, 0xff0000,
                  0x00cc66, 0x0000ff, 
                  0xff66cc]
 
-default = 'https://statsroyale.com/images/leagues/league-0.png'
+default = 'https://i.imgur.com/t7l7fnb.png'
 
 with open('data/emojis.json') as f:
     conversions = json.load(f)
